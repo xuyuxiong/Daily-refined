@@ -1,6 +1,7 @@
 # Daily-refined
 ## 2022.01.15
 ### vue 缓存函数
+```js
 const aysncCache = (fn) => {
   const cache = Object.create(null)
   return str => {
@@ -12,7 +13,9 @@ const aysncCache = (fn) => {
     }
   }
 }
+```
 ### 并发请求 请求成功则剩下的函数返回相同的返回值，失败则返回相应的错误值
+```js
 const asyncCache = (generatorFn,symbol) = > {
   const cache = new Map()
   return (param) => {
@@ -50,3 +53,4 @@ const asyncCache = (generatorFn,symbol) = > {
     })
   }
 }
+```
